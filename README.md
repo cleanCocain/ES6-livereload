@@ -10,7 +10,7 @@
      
 3. Creating the 'gulpfile.js'.
 
-   -Inside the folder create the gulp file "gulpfile.js".
+   - Inside the folder create the gulp file "gulpfile.js".
    
      ```Ruby
      var gulp = require('gulp');
@@ -88,7 +88,34 @@
  
      gulp.task('default', ['build', 'watch']);
      ```
+     
+6. All set with our gulp file configuration:
+   create your html file and add the reference JavaScript file in the dist folder.
+     (add the path of the converted JavaScript in the folder dist, to the html file created)
+     
+       `    <script src="./dist/js/app.js"></script>`
+       
+7. Adding Livereload automation: The watcher part (gulp task "watch") listens for file changes and sends notification to the    LiveReload server (running by default at port 35729).   
 
+   add the
+   
+    `<script src="//localhost:1234/livereload.js?snipver=1"></script>`
+    
+    to your html file.
+    
+    
+    - changing the port of gulp-livereload.
+         **inside the 'gulpfile.js' there is a gulp task for livereload process. there we can define our port**
+         
+         ````
+         gulp.task('watch', ['build'], function () {
+       livereload.listen();
+       gulp.watch('./src/js/*.js', ['build']);
+     });````
+      
+     inside `livereload.listen();` we cange the port to `livereload.listen(1234);`
+     
+     
 ## The folder structure
 
 ```````````````
