@@ -1,6 +1,6 @@
 # ES6-livereload
 
-Project Initialization:
+##Project Initialization:
 
 1. create a folder, inside the folder open the console and run 'npm init' to create the package.json file.
 
@@ -109,7 +109,7 @@ root folder
        |_____package.json
 ```````````````
 
-How to run:
+##How to run:
 
 1. copy all the files inside the folder and paste it inside apache server directory.
    (if you want you can create a your own Virtual Host for Apache server)
