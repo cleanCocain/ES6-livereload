@@ -44,8 +44,7 @@ How to run:
 5. make sure, after installing google chrome livereload plugin the the icon will appear on the toolbar. 
    we have to enable bofore try doing changes.
    
-               or
-   adding the
+   or adding the
    
    ```<script src="//localhost:35729/livereload.js?snipver=1"></script>```
    
