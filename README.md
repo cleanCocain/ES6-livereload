@@ -19,8 +19,14 @@ Project Initialization:
      gulp.watch('./src/js/*.js', ['build']);
      });
      gulp.task('default', ['build', 'watch']);`
+     
+4. Implementing babel and browerify
 
-
+     `npm install --save-dev babelify babel-preset-es2015 browserify vinyl-source-stream`
+     
+     update the 'gulpfile.js'
+     
+     
 
 How to run:
 
@@ -37,3 +43,10 @@ How to run:
 
 5. make sure, after installing google chrome livereload plugin the the icon will appear on the toolbar. 
    we have to enable bofore try doing changes.
+   
+               or
+   adding the
+   
+   ```<script src="//localhost:35729/livereload.js?snipver=1"></script>```
+   
+   to the **index.html** file
