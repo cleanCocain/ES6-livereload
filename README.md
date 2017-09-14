@@ -107,11 +107,11 @@
     - changing the port of gulp-livereload.
          **inside the 'gulpfile.js' there is a gulp task for livereload process. there we can define our port**
          
-         ````
-         gulp.task('watch', ['build'], function () {
-       livereload.listen();
-       gulp.watch('./src/js/*.js', ['build']);
-     });
+          ```
+          gulp.task('watch', ['build'], function () {
+          livereload.listen();
+          gulp.watch('./src/js/*.js', ['build']);
+          });```
      
       
      inside `livereload.listen();` we cange the port to `livereload.listen(1234);`
