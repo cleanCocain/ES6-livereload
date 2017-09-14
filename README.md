@@ -10,7 +10,7 @@ Project Initialization:
      
 3. Creating the 'gulpfile.js'.
 
-   *Inside the folder create the gulp file "gulpfile.js".
+   -Inside the folder create the gulp file "gulpfile.js".
    
      ```Ruby
      var gulp = require('gulp');
@@ -19,7 +19,8 @@ Project Initialization:
      gulp.task('watch', ['build'], function () {
      gulp.watch('./src/js/*.js', ['build']);
      });
-     gulp.task('default', ['build', 'watch']);```
+     gulp.task('default', ['build', 'watch']);
+     ```
      
 4. Implementing babel and browerify
 
@@ -27,7 +28,86 @@ Project Initialization:
      
      update the 'gulpfile.js'
      
+     ```Ruby
+     var gulp        = require('gulp');
+     var browserify  = require('browserify');
+     var babelify    = require('babelify');
+     var source      = require('vinyl-source-stream');
+ 
+     gulp.task('build', function () {
+       return browserify({entries: './src/js/app.js', debug: true})
+        .transform("babelify", { presets: ["es2015"] })
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(gulp.dest('./dist/js'));
+     });
+ 
+     gulp.task('watch', ['build'], function () {
+      gulp.watch('./src/js/*.js', ['build']);
+     });
+ 
+     gulp.task('default', ['build', 'watch']);
+     ```
+  
+5. Adding Uglify, Source map and Livereload
+
+     `npm install --save-dev vinyl-buffer gulp-uglify`
      
+     `npm install --save-dev gulp-sourcemaps gulp-livereload`
+
+
+     update the 'gulpfile.js'
+     
+     ```Ruby
+     var gulp        = require('gulp');
+     var browserify  = require('browserify');
+     var babelify    = require('babelify');
+     var source      = require('vinyl-source-stream');
+     var buffer      = require('vinyl-buffer');
+     var uglify      = require('gulp-uglify');
+     var sourcemaps  = require('gulp-sourcemaps');
+     var livereload  = require('gulp-livereload');
+ 
+     gulp.task('build', function () {
+        return browserify({entries: './src/js/app.js', debug: true})
+        .transform("babelify", { presets: ["es2015"] })
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest('./dist/js'));
+        .pipe(livereload());
+     });
+ 
+     gulp.task('watch', ['build'], function () {
+       livereload.listen();
+       gulp.watch('./src/js/*.js', ['build']);
+     });
+ 
+     gulp.task('default', ['build', 'watch']);
+     ```
+
+## The folder structure
+
+```Ruby
+root folder
+       |_____src
+       |       |____js
+       |             |___**your .js files**
+       |
+       |_____dist
+       |       |____js
+       |             |____maps
+       |             |      |____reference Javascript files
+       |             |
+       |             |____ **converted .js files**
+       |
+       |_____index.html
+       |_____gulpfile.js
+       |_____package.json
+```
 
 How to run:
 
