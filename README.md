@@ -91,7 +91,7 @@ Project Initialization:
 
 ## The folder structure
 
-```Ruby
+```scala
 root folder
        |_____src
        |       |____js
