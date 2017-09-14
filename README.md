@@ -111,7 +111,8 @@
          gulp.task('watch', ['build'], function () {
        livereload.listen();
        gulp.watch('./src/js/*.js', ['build']);
-     });````
+     });
+     
       
      inside `livereload.listen();` we cange the port to `livereload.listen(1234);`
      
