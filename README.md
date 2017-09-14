@@ -12,13 +12,13 @@ Project Initialization:
 
    *Inside the folder create the gulp file "gulpfile.js".
    
-     `var gulp = require('gulp');
-     gulp.task('build', function () {
-     });
-     gulp.task('watch', ['build'], function () {
-     gulp.watch('./src/js/*.js', ['build']);
-     });
-     gulp.task('default', ['build', 'watch']);
+     `var gulp = require('gulp');`
+    ` gulp.task('build', function () {`
+    ` });`
+   `  gulp.task('watch', ['build'], function () {`
+    ` gulp.watch('./src/js/*.js', ['build']);`
+   `  });`
+   `  gulp.task('default', ['build', 'watch']);`
 
 
 
