@@ -91,7 +91,7 @@ Project Initialization:
 
 ## The folder structure
 
-```Java
+```````````````
 root folder
        |_____src
        |       |____js
@@ -107,7 +107,7 @@ root folder
        |_____index.html
        |_____gulpfile.js
        |_____package.json
-```
+```````````````
 
 How to run:
 
