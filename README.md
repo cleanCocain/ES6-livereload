@@ -91,7 +91,7 @@ Project Initialization:
 
 ## The folder structure
 
-```scala
+```Java
 root folder
        |_____src
        |       |____js
