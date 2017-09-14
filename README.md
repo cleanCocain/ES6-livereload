@@ -1,5 +1,31 @@
 # ES6-livereload
 
+## How to run:
+
+1. copy all the files inside the folder and paste it inside apache server directory.
+   (if you want you can create a your own Virtual Host for Apache server)
+
+2. inside the directory, open the console and run 'gulp' in order to run the gulp file.
+
+3. To do the livereload changes you need to install the Google chrome plugin (Google chrome).
+
+   https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
+   
+   or adding the
+   
+   `<script src="//localhost:35729/livereload.js?snipver=1"></script>`
+   
+   to the **index.html** file (already added)
+
+4. Open chrome and in 'localhost' run your file.
+
+5. If you are using Google chrome plugin,make sure chrome livereload plugin icon appear on the toolbar is enabled. 
+  ** we have to enable before try doing changes. **
+   
+  
+   
+   
+
 ## Project Initialization:
 
 1. create a folder, inside the folder open the console and run 'npm init' to create the package.json file.
@@ -136,31 +162,3 @@ root folder
        |_____gulpfile.js
        |_____package.json
 ```````````````
-
-## How to run:
-
-1. copy all the files inside the folder and paste it inside apache server directory.
-   (if you want you can create a your own Virtual Host for Apache server)
-
-2. inside the directory, open the console and run 'gulp' in order to run the gulp file.
-
-3. To do the livereload changes you need to install the Google chrome plugin (Google chrome).
-
-   https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
-   
-   or adding the
-   
-   ```<script src="//localhost:35729/livereload.js?snipver=1"></script>```
-   
-   to the **index.html** file
-
-4. Open chrome and in 'localhost' run your file.
-
-5. make sure, after installing google chrome livereload plugin the the icon will appear on the toolbar. 
-   we have to enable before try doing changes.
-   
-   or adding the
-   
-   ```<script src="//localhost:35729/livereload.js?snipver=1"></script>```
-   
-   to the **index.html** file
