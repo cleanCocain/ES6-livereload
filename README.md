@@ -4,10 +4,18 @@
 
 1. copy all the files inside the folder and paste it inside apache server directory.
    (if you want you can create a your own Virtual Host for Apache server)
+   
+2. install following tools.
 
-2. inside the directory, open the console and run 'gulp' in order to run the gulp file.
+       ````npm install --save-dev gulp
+           npm install --save-dev babelify babel-preset-es2015 browserify vinyl-source-stream
+           npm install --save-dev vinyl-buffer gulp-uglify
+           npm install --save-dev gulp-sourcemaps gulp-livereload````
 
-3. To do the livereload changes you need to install the Google chrome plugin (Google chrome).
+
+3. inside the directory, open the console and run 'gulp' in order to run the gulp file.
+
+4. To do the livereload changes you need to install the Google chrome plugin (Google chrome).
 
    https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en
    
@@ -17,9 +25,9 @@
    
    to the **index.html** file (already added)
 
-4. Open chrome and in 'localhost' run your file.
+5. Open chrome and in 'localhost' run your file.
 
-5. If you are using Google chrome plugin,make sure chrome livereload plugin icon appear on the toolbar is enabled. 
+6. If you are using Google chrome plugin,make sure chrome livereload plugin icon appear on the toolbar is enabled. 
   ** we have to enable before try doing changes. **
    
   
