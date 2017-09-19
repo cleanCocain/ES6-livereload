@@ -7,10 +7,10 @@
    
 2. install following tools.
 
-       ````npm install --save-dev gulp
+           npm install --save-dev gulp
            npm install --save-dev babelify babel-preset-es2015 browserify vinyl-source-stream
            npm install --save-dev vinyl-buffer gulp-uglify
-           npm install --save-dev gulp-sourcemaps gulp-livereload````
+           npm install --save-dev gulp-sourcemaps gulp-livereload
 
 
 3. inside the directory, open the console and run 'gulp' in order to run the gulp file.
